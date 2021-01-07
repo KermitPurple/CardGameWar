@@ -34,6 +34,11 @@ export default class Deck{
     pop(index = 0){
         return this.cards.splice(index, 1)[0];
     }
+
+    shuffle_in(card){
+        const index = Math.floor(Math.random() * this.number_of_cards);
+        this.cards.splice(index, 0, card);
+    }
 }
 
 class Card{
@@ -55,9 +60,11 @@ class Card{
         return div
     }
 
-    compare(card, comparison = (a, b)=>{return a < b}){
+    compare(card, comparison = (a, b)=>{return a > b}){
         const index1 = CARD_VALUES.indexOf(this.value);
         const index2 = CARD_VALUES.indexOf(card.value);
+        console.log(CARD_VALUES);
+        console.log(`${index1}, ${index2}`);
         return comparison(index1, index2);
     }
 }
