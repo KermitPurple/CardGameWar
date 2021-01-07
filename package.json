@@ -1,0 +1,16 @@
+{
+  "name": "cardgame",
+  "version": "1.0.0",
+  "description": "Testing out card games with a tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Shane McDonough",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  }
+}
